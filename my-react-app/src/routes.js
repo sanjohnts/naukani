@@ -16,7 +16,7 @@ export const pages = [
     Component: Home,
     title: "Nadukani Zoo & Safari Park | Taliparamba, Kannur, Kerala",
     description: "Nadukani Zoo & Safari Park is a proposed wildlife, safari and biodiversity destination at Nadukani, Taliparamba, Kannur, Kerala. Project information, planned attractions and updates.",
-    jsonLd: {"@context": "https://schema.org", "@type": "WebSite", "name": "Nadukani Zoo & Safari Park", "url": "https://nadukanisafaripark.com/", "description": "Project information for the proposed Nadukani Zoo & Safari Park at Taliparamba, Kannur, Kerala."},
+    jsonLd: {"@context": "https://schema.org", "@type": "WebSite", "name": "Nadukani Zoo & Safari Park", "url": "https://www.nadukanisafaripark.com/", "description": "Project information for the proposed Nadukani Zoo & Safari Park at Taliparamba, Kannur, Kerala."},
   },
   {
     path: "/about",
