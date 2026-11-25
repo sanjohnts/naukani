@@ -6,6 +6,7 @@ import greatHornbillImg from '../assets/img/great-hornbill.webp'
 import mistyForestImg from '../assets/img/misty-forest.png'
 import monitorLizardImg from '../assets/img/monitor-lizard.webp'
 import spottedDeerImg from '../assets/img/spotted-deer.webp'
+import tigerForestImg from '../assets/img/tiger-forest.webp'
 
 export default function Wildlife() {
   return (
@@ -82,9 +83,9 @@ export default function Wildlife() {
               </div>
             </article>
             <article className="card cat" id="carnivores" data-reveal>
-              <div className="cat-media art-panel">
-                <Icon name="paw" />
-                <span>Photos coming soon</span>
+              <div className="cat-media">
+                <img src={tigerForestImg} alt="Bengal tiger walking through a sunlit teak forest" loading="lazy" decoding="async" />
+                <span className="img-note">Representative image</span>
               </div>
               <div className="cat-body">
                 <h3>Carnivores</h3>
