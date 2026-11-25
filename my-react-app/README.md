@@ -1,16 +1,37 @@
-# React + Vite
+# Nadukani Zoo & Safari Park — website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React 19 + Vite + React Router. Every page is pre-rendered to plain HTML at build time, so it
+loads fast, works on any static host and is fully visible to search engines.
 
-Currently, two official plugins are available:
+## Commands
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```sh
+npm install        # once
+npm run dev        # local dev server with hot reload
+npm run build      # production build into dist/ (one HTML file per page + 404.html)
+npm run preview    # serve dist/ locally
+npm run lint
+```
 
-## React Compiler
+Building for a sub-folder (GitHub Pages): `BASE_PATH=/naukani/ npm run build`.
+For a domain root (e.g. nadukanisafaripark.com) leave `BASE_PATH` unset.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Where things are
 
-## Expanding the ESLint configuration
+| What | File |
+| --- | --- |
+| Page content | `src/pages/*.jsx` (one per page) |
+| Page titles, descriptions, URLs | `src/routes.js` |
+| Site address used for canonical/social links | `SITE_URL` in `src/seo.js` |
+| Menu links | `NAV` in `src/components/Header.jsx` |
+| Footer | `src/components/Footer.jsx` |
+| Gallery photos | `src/data/photos.js` |
+| Icons | `src/components/Icon.jsx` (`<Icon name="leaf" />`) |
+| Styles | `src/styles/style.css` |
+| Images | `src/assets/img/` |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To add a page: create `src/pages/NewPage.jsx`, add it to `src/routes.js`, and (optionally) to
+`NAV` and `public/sitemap.xml`.
+
+Old static-site links such as `/about.html` or `/wildlife.html#birds` forward to the new
+addresses automatically.
