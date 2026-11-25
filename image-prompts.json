@@ -1,0 +1,99 @@
+{
+  "project": "Nadukani Zoo & Safari Park website",
+  "style_guide": "Realistic wildlife-documentary photography of the Western Ghats, Kerala, India. Tropical evergreen and moist deciduous forest, deep greens with soft warm morning light, natural colours, gentle contrast. Matches the site's dark forest-green palette (#0f2216, olive accents). No text, no people, no fences or enclosures. Every image is labelled on the site as a representative image.",
+  "negative_prompt": "text, letters, watermark, logo, signage, people, hands, cages, fences, zoo enclosure, buildings, vehicles, African elephant, savanna, cartoon, illustration, 3D render, oversaturated, HDR halos, blur, low resolution, deformed anatomy, extra limbs, duplicated animals",
+  "images": [
+    {
+      "id": "birds",
+      "priority": "missing - fills the 'Photos coming soon' panel",
+      "file": "src/assets/img/great-hornbill.webp",
+      "used_on": "Wildlife page > Birds card",
+      "aspect_ratio": "16:10",
+      "size": "2400x1500",
+      "prompt": "A great hornbill (Buceros bicornis), Kerala's state bird, perched on a moss-covered branch high in a Western Ghats rainforest canopy. Large yellow casque on a curved yellow beak, black and white plumage, white neck, red eye. Bird in the right third of the frame, facing left. Soft morning light filtering through leaves, background of deep green foliage softly blurred. Wildlife documentary photograph, 400mm telephoto, shallow depth of field, natural colours.",
+      "alt": "Great hornbill perched in a rainforest canopy (representative image)"
+    },
+    {
+      "id": "reptiles",
+      "priority": "missing - fills the 'Photos coming soon' panel",
+      "file": "src/assets/img/monitor-lizard.webp",
+      "used_on": "Wildlife page > Reptiles card",
+      "aspect_ratio": "16:10",
+      "size": "2400x1500",
+      "prompt": "A Bengal monitor lizard (Varanus bengalensis) resting on a mossy fallen log beside a shaded forest stream in the Western Ghats. Olive-brown speckled scales, long tail curving along the log, calm pose, head turned slightly toward the camera. Low eye-level angle, dappled sunlight, ferns and leaf litter around it, soft green background bokeh. Wildlife documentary photograph, natural colours, sharp detail on the scales.",
+      "alt": "Monitor lizard resting on a mossy log in the forest (representative image)"
+    },
+    {
+      "id": "carnivores",
+      "priority": "missing - fills the 'Photos coming soon' panel",
+      "file": "src/assets/img/tiger-forest.webp",
+      "used_on": "Wildlife page > Carnivores card",
+      "aspect_ratio": "16:10",
+      "size": "2400x1500",
+      "prompt": "A Bengal tiger walking mid-stride through a moist deciduous teak forest in Kerala, dappled golden morning light on its striped coat, looking ahead along a narrow animal trail. Tiger slightly right of centre, eye-level telephoto view, tall teak trunks and green undergrowth softly blurred behind. Wild, natural setting, no fences. Wildlife documentary photograph, natural colours.",
+      "alt": "Tiger walking through a sunlit forest (representative image)"
+    },
+    {
+      "id": "museum",
+      "priority": "missing - fills the 'Concept' panel",
+      "file": "src/assets/img/natural-history-gallery.webp",
+      "used_on": "Attractions page > Natural History Museum",
+      "aspect_ratio": "4:3",
+      "size": "2000x1500",
+      "prompt": "Interior of a calm, modern natural history museum gallery. An Asian elephant skeleton as the centrepiece, glass display cases holding butterfly and beetle collections, framed botanical illustrations of tropical forest plants on warm wooden walls, soft daylight from high clerestory windows, polished stone floor. Empty, no visitors. Generic and representative, not a real building. Architectural interior photograph, 24mm lens, warm natural tones.",
+      "negative_prompt_extra": "readable labels, plaques with text, museum name, people",
+      "alt": "Natural history museum gallery with an elephant skeleton (representative concept image)"
+    },
+    {
+      "id": "elephant-herd",
+      "priority": "upgrade - current file is only 634x479",
+      "file": "src/assets/img/elephant-herd.webp",
+      "used_on": "Home > Mammals card (4:5 crop), Wildlife > Mammals card (16:10 crop), Gallery",
+      "aspect_ratio": "3:2",
+      "size": "2400x1600",
+      "prompt": "A family of Asian elephants (Elephas maximus), three adult females and a small calf between them, walking along a red-earth track in a Western Ghats moist deciduous forest. Small rounded ears, twin-domed heads, adults without large tusks. Group centred so it can be cropped square or tall. Soft morning haze, warm light, green forest on both sides. Wildlife documentary photograph, eye level, natural colours.",
+      "alt": "Asian elephant herd walking along a forest track (representative image)"
+    },
+    {
+      "id": "elephants-crossing",
+      "priority": "upgrade - current file is only 767x399 but is used as a full-width banner",
+      "file": "src/assets/img/elephants-crossing.webp",
+      "used_on": "Visitor Info > full-width banner (text on the left), Home > 'Planning a Visit?' card (image on the right), Gallery",
+      "aspect_ratio": "16:9",
+      "size": "2560x1440",
+      "prompt": "Wide landscape view of a small group of Asian elephants crossing a narrow, quiet forest road in the Western Ghats at golden hour, light mist between the trees. Elephants placed in the right third of the frame; the left 40% is calm, darker forest suitable for overlaid text. Tall evergreen trees, warm backlight rimming the elephants. No vehicles, no road signs, no road markings. Wildlife documentary photograph, natural colours.",
+      "alt": "Asian elephants crossing a forest road (representative image)"
+    },
+    {
+      "id": "ferns-forest-floor",
+      "priority": "upgrade - current file is only 640x640 but is used as the Contact page header",
+      "file": "src/assets/img/ferns-forest-floor.webp",
+      "used_on": "Contact > page header (wide, text on the left), Home and Wildlife > Native Flora cards, Attractions, Gallery",
+      "aspect_ratio": "3:2",
+      "size": "2400x1600",
+      "prompt": "Low-angle view across a Western Ghats rainforest floor: lush green ferns, moss-covered rocks, fallen leaves and small creeping plants, soft shafts of light through the canopy above. Main interest in the centre with a gentle falloff toward the edges so it crops well square, tall or wide. Deep greens with warm highlights. Nature photograph, shallow depth of field, natural colours.",
+      "alt": "Ferns and moss on a rainforest floor (representative image)"
+    },
+    {
+      "id": "misty-forest",
+      "priority": "upgrade - current file is only 500x500 PNG",
+      "file": "src/assets/img/misty-forest.webp",
+      "replaces": "src/assets/img/misty-forest.png",
+      "used_on": "Home > 'The Vision' card (right side), Wildlife > tall photo (4:5), Gallery",
+      "aspect_ratio": "4:5",
+      "size": "1600x2000",
+      "prompt": "Vertical view of mist rising over dense evergreen forest canopy on a Western Ghats hillside at dawn, layered ridges fading into soft fog, treetops in deep greens against pale grey-white mist. Calm and atmospheric, slightly muted tones. Landscape photograph, telephoto compression, natural colours.",
+      "alt": "Mist rising over dense green forest (representative image)"
+    },
+    {
+      "id": "forest-stream",
+      "priority": "upgrade - current file is only 800x450",
+      "file": "src/assets/img/forest-stream.webp",
+      "used_on": "Conservation > wide photo (16:10), Attractions > Rainwater (4:3), Home > update thumbnail, Gallery",
+      "aspect_ratio": "16:10",
+      "size": "2400x1500",
+      "prompt": "A clear, shallow stream flowing over moss-covered boulders in a Western Ghats evergreen forest, silky long-exposure water, ferns along the banks, dappled sunlight on the rocks. Stream centred and leading into the frame. Lush deep greens with warm highlights. Nature photograph, natural colours.",
+      "alt": "Clear forest stream flowing over mossy rocks (representative image)"
+    }
+  ]
+}
