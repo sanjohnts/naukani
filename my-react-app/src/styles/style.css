@@ -755,3 +755,115 @@ fieldset[disabled] .field input, fieldset[disabled] .field select, fieldset[disa
 }
 
 .tl-item.card { overflow: visible; }
+
+/* ==========================================================================
+   Phones, foldables & dual-screen devices
+   ========================================================================== */
+
+/* Tablets and phones: headlines break into even lines instead of leaving one word on its own. */
+@media (max-width: 1180px) {
+  h1, h2, h3, .vm-vision, .quote-card blockquote { text-wrap: balance; }
+  p, li { text-wrap: pretty; }
+}
+
+/* Tap feedback in the site's olive rather than the default grey box. */
+a, button, select, summary { -webkit-tap-highlight-color: rgba(167, 197, 107, 0.22); }
+
+/* iPhone (viewport-fit=cover): keep content clear of the notch/Dynamic Island and the home bar. */
+.wrap { width: min(100% - 40px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px), var(--wrap)); }
+.site-header { padding-top: calc(14px + env(safe-area-inset-top, 0px)); }
+.site-header.scrolled { padding-top: calc(6px + env(safe-area-inset-top, 0px)); }
+.site-footer { padding-bottom: calc(26px + env(safe-area-inset-bottom, 0px)); }
+@media (max-width: 1180px) {
+  .nav {
+    padding-top: calc(96px + env(safe-area-inset-top, 0px));
+    padding-right: calc(24px + env(safe-area-inset-right, 0px));
+    padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (max-width: 600px) {
+  .wrap { width: min(100% - 32px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px), var(--wrap)); }
+}
+
+/* iPhone Safari zooms the whole page when a form field under 16px is tapped. */
+@media (pointer: coarse) {
+  .explore select, .field input, .field select, .field textarea { font-size: 16px; }
+}
+
+/* Touch screens: no hover lift or zoom that stays stuck after a tap. */
+@media (hover: none) {
+  .species:hover, a.tile:hover { transform: none; }
+  .species:hover .species-media img, .feature:hover .feature-media img,
+  .cat:hover .cat-media img, .g-item:hover img,
+  .btn:hover .ic, .link:hover .ic { transform: none; }
+}
+
+/* Photo viewer: size to the visible screen (iOS toolbars come and go) and avoid the home bar. */
+.lightbox { height: 100dvh; max-height: 100dvh; }
+.lightbox img { max-height: 78dvh; }
+.lb-close { top: calc(20px + env(safe-area-inset-top, 0px)); right: calc(20px + env(safe-area-inset-right, 0px)); }
+.lb-prev { left: calc(20px + env(safe-area-inset-left, 0px)); }
+.lb-next { right: calc(20px + env(safe-area-inset-right, 0px)); }
+@media (max-width: 600px) {
+  .lb-prev, .lb-next { bottom: calc(24px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* Narrow phones: folded Galaxy Z Fold cover screen (344px), iPhone SE / mini (375px). */
+@media (max-width: 380px) {
+  .hero h1, .page-hero h1 { font-size: 36px; }
+  .h2 { font-size: 28px; }
+  .brand-mark { font-size: 30px; }
+  .brand-text strong { font-size: 14px; }
+  .hero-stats { column-gap: 12px; }
+  .card-pad { padding: 18px; }
+}
+
+/* Phones and folded foldables turned sideways: short screens, so a compact side-by-side hero. */
+@media (orientation: landscape) and (max-height: 500px) {
+  .site-header { padding-top: calc(8px + env(safe-area-inset-top, 0px)); padding-bottom: 8px; }
+  .hero { padding: 84px 0 44px; }
+  .hero-in { grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr); gap: 28px; align-items: center; }
+  .hero h1 { font-size: clamp(30px, 4.6vw, 42px); margin: 14px 0 12px; }
+  .hero .lead, .page-hero .lead { font-size: 15px; }
+  .explore { margin-top: 20px; }
+  .explore-loc { display: none; }
+  .hero-stats { margin-top: 22px; gap: 14px; }
+  .hero-visual { min-height: 0; }
+  .hero-orb { width: 100%; margin: 0; }
+  .status-card { position: relative; width: 100%; max-width: none; margin: -44px 0 0; grid-template-columns: 1fr; }
+  .status-card img { display: none; }
+  .page-hero { padding: 92px 0 40px; }
+  .page-hero h1 { font-size: clamp(30px, 4.6vw, 44px); margin: 12px 0 10px; }
+  .crumbs { margin-bottom: 12px; }
+  .banner { min-height: 0; }
+  .banner-in { padding: 44px 0; }
+  .nav { padding-top: calc(72px + env(safe-area-inset-top, 0px)); gap: 14px; }
+  .nav-link { font-size: 16px; padding: 9px 6px; }
+  .lightbox img { max-height: 72dvh; }
+}
+
+/* Dual-screen devices spanned across the hinge (Surface Duo and similar): one column per screen,
+   and single-column blocks stay on the left screen so no text sits in the hinge. */
+@media (horizontal-viewport-segments: 2) {
+  :root {
+    --gutter: 20px;
+    --pane: calc(env(viewport-segment-width 0 0, 50vw) - 2 * var(--gutter));
+    --hinge-gap: calc(env(viewport-segment-left 1 0, 50vw) - env(viewport-segment-right 0 0, 50vw) + 2 * var(--gutter));
+  }
+  .wrap { width: auto; margin-inline: 0; padding-inline: var(--gutter); }
+  .hero-in, .split, .split-wide, .bento, .feature, .vm-card, .cat-grid, .contact-cards,
+  .status-list, .steps, .values-in, .footer-grid, .tiles-lg {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--hinge-gap);
+  }
+  .gallery { columns: 2; column-gap: var(--hinge-gap); }
+  .species-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .value:nth-child(3) { border-left: 0; }
+  .value:nth-child(n + 3) { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  .page-hero .wrap > *, .banner-in > *, .section-head > div, .callout, .timeline,
+  .quote-card, .footer-note, .filters { max-width: var(--pane); }
+  .hero-visual { min-height: 0; }
+  .hero-orb { width: 100%; margin: 0; }
+  .explore-loc { display: none; }
+  .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 20px; }
+}
