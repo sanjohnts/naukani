@@ -1,0 +1,59 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "cd my-react-app && npm ci",
+  "buildCommand": "cd my-react-app && npm run build",
+  "outputDirectory": "my-react-app/dist",
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/wildlife.html",
+      "destination": "/wildlife",
+      "permanent": true
+    },
+    {
+      "source": "/safari.html",
+      "destination": "/safari",
+      "permanent": true
+    },
+    {
+      "source": "/attractions.html",
+      "destination": "/attractions",
+      "permanent": true
+    },
+    {
+      "source": "/conservation.html",
+      "destination": "/conservation",
+      "permanent": true
+    },
+    {
+      "source": "/gallery.html",
+      "destination": "/gallery",
+      "permanent": true
+    },
+    {
+      "source": "/visitor-info.html",
+      "destination": "/visitor-info",
+      "permanent": true
+    },
+    {
+      "source": "/news.html",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    }
+  ]
+}

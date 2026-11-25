@@ -2,8 +2,9 @@
 
 Website for the proposed **Nadukani Zoo & Safari Park** (Taliparamba, Kannur, Kerala), built with React + Vite.
 
-- Live site: https://sanjohnts.github.io/naukani/
+- Live site: https://www.nadukanisafaripark.com/
 - Source: [`my-react-app/`](my-react-app/) (see its README for how to run and edit it)
 
-Every push to `main` rebuilds the site and publishes it to the `gh-pages` branch
-([.github/workflows/deploy.yml](.github/workflows/deploy.yml)).
+Hosting is on Vercel: every push to `main` is built and published automatically.
+[`vercel.json`](vercel.json) tells Vercel to build inside `my-react-app/` and serve `my-react-app/dist`,
+and redirects the old `*.html` addresses to the new ones.

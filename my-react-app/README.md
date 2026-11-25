@@ -13,8 +13,8 @@ npm run preview    # serve dist/ locally
 npm run lint
 ```
 
-Building for a sub-folder (GitHub Pages): `BASE_PATH=/naukani/ npm run build`.
-For a domain root (e.g. nadukanisafaripark.com) leave `BASE_PATH` unset.
+The live site (www.nadukanisafaripark.com) is built by Vercel from the repo root `vercel.json`.
+Only if you ever host it in a sub-folder, build with `BASE_PATH=/folder/ npm run build`.
 
 ## Where things are
 
