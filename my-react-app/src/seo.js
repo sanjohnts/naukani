@@ -1,7 +1,7 @@
 import { pages } from './routes'
 
 // The address the site is meant to live at; canonical and social-preview URLs point here.
-export const SITE_URL = 'https://nadukanisafaripark.com'
+export const SITE_URL = 'https://www.nadukanisafaripark.com'
 export const SITE_NAME = 'Nadukani Zoo & Safari Park'
 
 const NOT_FOUND = {
@@ -23,6 +23,6 @@ export function getMeta(pathname) {
     title: page.title,
     description: page.description,
     jsonLd: page.jsonLd,
-    url: SITE_URL + (path === '/' ? '/' : `${path}/`),
+    url: SITE_URL + path,
   }
 }
