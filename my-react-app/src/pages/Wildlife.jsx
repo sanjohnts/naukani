@@ -3,6 +3,7 @@ import Icon from '../components/Icon'
 import elephantHerdImg from '../assets/img/elephant-herd.webp'
 import fernsForestFloorImg from '../assets/img/ferns-forest-floor.webp'
 import mistyForestImg from '../assets/img/misty-forest.png'
+import monitorLizardImg from '../assets/img/monitor-lizard.webp'
 import spottedDeerImg from '../assets/img/spotted-deer.webp'
 
 export default function Wildlife() {
@@ -58,9 +59,9 @@ export default function Wildlife() {
               </div>
             </article>
             <article className="card cat" id="reptiles" data-reveal>
-              <div className="cat-media art-panel">
-                <Icon name="reptile" />
-                <span>Photos coming soon</span>
+              <div className="cat-media">
+                <img src={monitorLizardImg} alt="Monitor lizard resting on a mossy log beside a forest stream" loading="lazy" decoding="async" />
+                <span className="img-note">Representative image</span>
               </div>
               <div className="cat-body">
                 <h3>Reptiles</h3>
